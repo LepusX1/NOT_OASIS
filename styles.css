@@ -1,0 +1,145 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: #e0e0e0;
+    height: 100%;
+}
+
+header {
+    background: #0d0d0d url('img/header.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    vertical-align: middle;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #00ffe5;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid #ff00ff;
+    padding-bottom: 3px;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+    background: linear-gradient(to bottom, #0d0d0d 0%, #001a66 100%);
+}
+
+h1, h2 {
+    color: #00ffe5;
+    text-shadow: 0 0 10px #00ffe5;
+}
+
+footer {
+    background: #0033cc url('img/footer.jpg') no-repeat center center;
+    background-size: cover;
+    color: #aaa;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    min-height: 350px;
+    width: 100%;
+}
+
+.contact-card {
+    background: rgba(20, 30, 60, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 4px 32px rgba(0, 255, 229, 0.15);
+    padding: 32px 24px;
+    max-width: 400px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-card form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-card label {
+    color: #00ffe5;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.contact-card input,
+.contact-card textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #222a;
+    border-radius: 8px;
+    background: #101a2a;
+    color: #e0e0e0;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus {
+    border-color: #00ffe5;
+    box-shadow: 0 0 8px #00ffe5;
+}
+
+.contact-card button {
+    background: #00ffe5;
+    color: #101a2a;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-card button:hover {
+    background: #ff00ff;
+    color: #fff;
+}
