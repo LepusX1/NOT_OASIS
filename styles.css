@@ -34,24 +34,33 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 nav ul li a {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #101a2a;
     color: #00ffe5;
-    text-decoration: none;
+    border-radius: 8px;
     font-weight: bold;
-    transition: 0.3s;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,255,229,0.08);
+    transition: 
+        transform 0.2s cubic-bezier(.4,2,.3,1),
+        box-shadow 0.2s,
+        background 0.3s,
+        color 0.3s;
+    border: none;
+    position: relative;
 }
 
-nav ul li a:hover {
-    color: #ff00ff;
-    text-shadow: 0 0 10px #ff00ff;
-}
-
+nav ul li a:hover,
 nav ul li a.active {
-    border-bottom: 2px solid #ff00ff;
-    padding-bottom: 3px;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px #00ffe5;
+    background: #00ffe5;
+    color: #101a2a;
 }
 
 main {
@@ -80,7 +89,7 @@ footer {
     justify-content: left;
     align-items: center;
     gap: 20px;
-    min-height: 350px;
+    min-height: 150px;
     width: 100%;
 }
 
