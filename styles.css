@@ -92,6 +92,17 @@ footer {
     width: 100%;
 }
 
+.gallery img {
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 24px #00ffe5;
+    z-index: 2;
+}
+
 .contact-card {
     background: rgba(20, 30, 60, 0.95);
     border-radius: 16px;
@@ -150,4 +161,45 @@ footer {
 .contact-card button:hover {
     background: #ff00ff;
     color: #fff;
+}
+
+.img-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(50, 50, 50, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.img-modal.active {
+    display: flex;
+}
+
+.img-modal .modal-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    width: 900px; /* 300% of 300px */
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px #222;
+    background: #222a;
+    padding: 16px;
+}
+
+.img-modal .close {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    text-shadow: 0 0 10px #000;
 }

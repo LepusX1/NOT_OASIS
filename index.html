@@ -39,6 +39,10 @@
                 <img src="img/world.webp" alt="Virtual World" width="300">
                 <img src="img/artifact.webp" alt="OASIS Artifacts" width="300">
         </div>
+        <div id="img-modal" class="img-modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-img">
+        </div>
 
         <h2>Presentation Trailer</h2>
         <iframe width="420" height="315"
@@ -50,5 +54,26 @@
     <footer>
         <p>OASIS © 2025</p>
     </footer>
+
+    <script>
+document.querySelectorAll('.gallery img').forEach(img => {
+    img.addEventListener('click', function() {
+        const modal = document.getElementById('img-modal');
+        const modalImg = document.getElementById('modal-img');
+        modalImg.src = this.src;
+        modal.classList.add('active');
+    });
+});
+
+document.querySelector('.img-modal .close').onclick = function() {
+    document.getElementById('img-modal').classList.remove('active');
+};
+
+document.getElementById('img-modal').onclick = function(e) {
+    if (e.target === this) {
+        this.classList.remove('active');
+    }
+};
+</script>
 </body>
 </html>
